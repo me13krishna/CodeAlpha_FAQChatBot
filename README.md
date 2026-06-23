@@ -1,6 +1,6 @@
 # CodeAlpha FAQ ChatBot
 
-[![CI](https://github.com/me13krishna/CodeAlpha_FAQChatBot/actions/workflows/python-ci.yml/badge.svg)](https://github.com/me13krishna/CodeAlpha_FAQChatBot/actions/workflows/python-ci.yml)
+
 
 A simple Streamlit-based FAQ chatbot that matches user questions against a curated FAQ dataset using TF-IDF vectorization and cosine similarity.
 
