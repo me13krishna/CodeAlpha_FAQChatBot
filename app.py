@@ -2,17 +2,17 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Page Title
-st.title("🤖 FAQ Chatbot")
-st.write("Ask questions about AI, Python, GitHub, Streamlit, and more.")
+# Page config
+st.set_page_config(page_title="CodeAlpha FAQ Chatbot", page_icon="🤖", layout="centered")
+
+# Header
+st.title("🤖 CodeAlpha FAQ Chatbot")
+st.markdown("Ask questions about AI, Machine Learning, Python, GitHub, Streamlit, and more.")
 
 # Sidebar
 st.sidebar.title("Topics")
-st.sidebar.write("Artificial Intelligence")
-st.sidebar.write("Machine Learning")
-st.sidebar.write("Python")
-st.sidebar.write("GitHub")
-st.sidebar.write("Streamlit")
+st.sidebar.info("This bot matches your question to a curated FAQ set using TF-IDF + cosine similarity.")
+st.sidebar.write("- Artificial Intelligence\n- Machine Learning\n- Python\n- GitHub\n- Streamlit")
 
 # FAQ Dataset
 faqs = {
@@ -91,16 +91,9 @@ if st.button("Ask"):
         score = similarities[0][best_match_index]
 
         if score > 0.15:
-
             best_question = questions[best_match_index]
-
             st.info(f"Matched FAQ: {best_question}")
-
             st.write(f"Similarity Score: {score:.2f}")
-
             st.success(faqs[best_question])
-
         else:
-            st.warning(
-                "Sorry, I couldn't find a suitable answer for your question."
-            )
+            st.warning("Sorry, I couldn't find a suitable answer for your question.")
