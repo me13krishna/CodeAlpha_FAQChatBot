@@ -64,3 +64,10 @@ streamlit run app.py
 ## Notes
 
 The chatbot is FAQ-based, so it works best when the input question is similar to one of the predefined FAQ entries. For more flexible responses, you can extend it with NLP or an LLM-based approach.
+
+## Author
+
+Krishna Mishra
+
+LinkedIn: www.linkedin.com/in/krishnamishra13
+GitHub: https://github.com/me13krishna
